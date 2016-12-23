@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">弹幕视频播放器</string>
+    <string name="action_settings">action_settings</string>
+    <string name="show">显示</string>
+    <string name="hide">恢复</string>
+    <string name="send">发送</string>
+    <string name="text_hint">input text here</string>
+    <string name="empty_prompt">please input text</string>
+</resources>

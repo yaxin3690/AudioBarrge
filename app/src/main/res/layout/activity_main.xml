@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <VideoView
+            android:id="@+id/vv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <bf.cloud.BFMediaPlayerControllerVod
+            android:id="@+id/vod_media_controller_vod"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"></bf.cloud.BFMediaPlayerControllerVod>
+
+        <SurfaceView
+            android:id="@+id/sfv_surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+
+        <com.opendanmaku.DanmakuView
+            android:id="@+id/danmakuView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:end_Y_offset="0.8"
+            app:max_row="4"
+            app:max_running_per_row="2"
+            app:pick_interval="1000"
+            app:show_debug="false"
+            app:start_Y_offset="0.2" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_framelayout"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:hint="请输入你要发送的信息"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发送" />
+
+        <Button
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="恢复" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/wv_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_layout" />
+</RelativeLayout>
